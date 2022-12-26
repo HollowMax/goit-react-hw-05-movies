@@ -7,9 +7,13 @@ export function Cast() {
   const [data, setData] = useState([]);
   const { movieId } = useParams();
 
-  useEffect(() => {
-    handleFetch();
-  }, []);
+  useEffect(
+    () => {
+      handleFetch();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
   const handleFetch = () => {
     fetch(

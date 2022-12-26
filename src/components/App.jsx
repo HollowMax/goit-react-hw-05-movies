@@ -1,6 +1,6 @@
 import { Header } from './Header/Header';
 import { Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { Trends } from '../pages/Trends';
 import { Movies } from 'pages/Movies';
 import { MovieDetails } from 'pages/MovieDetails/MovieDetails';

@@ -9,9 +9,13 @@ export function Movies() {
   const queryParam = query.get('query') ?? '';
   const location = useLocation();
 
-  useEffect(() => {
-    setInpuData(queryParam);
-  }, []);
+  useEffect(
+    () => {
+      setInpuData(queryParam);
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
   const handleFetch = searchAQuery => {
     if (!searchAQuery) {

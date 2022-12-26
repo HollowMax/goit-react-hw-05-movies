@@ -8,9 +8,13 @@ export function MovieDetails() {
 
   const location = useLocation();
 
-  useEffect(() => {
-    handleFetch();
-  }, []);
+  useEffect(
+    () => {
+      handleFetch();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
   const handleFetch = () => {
     fetch(
