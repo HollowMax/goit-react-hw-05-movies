@@ -12,6 +12,7 @@ export function Movies() {
   useEffect(
     () => {
       setInpuData(queryParam);
+      handleFetch(queryParam);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []

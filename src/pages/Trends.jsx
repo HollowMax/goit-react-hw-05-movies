@@ -10,7 +10,9 @@ export function Trends() {
   useEffect(() => handleFetch(), []);
 
   const handleFetch = () => {
-    fetch('https://api.themoviedb.org/3/trending/all/day?api_key=f6d5a4fa968409c62e241bddb68c1803')
+    fetch(
+      'https://api.themoviedb.org/3/trending/movie/day?api_key=f6d5a4fa968409c62e241bddb68c1803'
+    )
       .then(el => el.json())
       .then(el => setMovies(el.results));
   };
